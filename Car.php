@@ -1,8 +1,10 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
-class Car extends Vehicle//The parent class is Vehicle
+
+class Car extends Vehicle implements LightableInterface//The parent class is Vehicle
 
 {
     //Const properties
@@ -12,9 +14,9 @@ class Car extends Vehicle//The parent class is Vehicle
     ];
 
     //Properties
-     private string $energy;
-     private int $energyLevel;
-     private bool $hasParkBreak;
+    private string $energy;
+    private int $energyLevel;
+    private bool $hasParkBreak;
 
     //Methods
 
@@ -60,11 +62,20 @@ class Car extends Vehicle//The parent class is Vehicle
 
     public function start($hasParkBrake): string
     {
-        if ($hasParkBrake == true){
+        if ($hasParkBrake == true) {
             throw new Exception("Brake is active.");
         }
         $this->currentSpeed = 15;
         return "Go !";
+    }
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff() : bool {
+        return false;
     }
 
 }

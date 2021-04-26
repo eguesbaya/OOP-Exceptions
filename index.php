@@ -94,6 +94,15 @@ try {
 }
 
 
+?>
+
+<h2>Part 5 : Implémentation d'interfaces</h2>
+
+<?php
+echo $peugeot->switchOn();
+echo $peugeot->switchOff();
+
+echo $bike->switchOn();
 
 ?>
 
