@@ -11,8 +11,7 @@ class Bicycle extends Vehicle implements LightableInterface
             return true;
         } else {
             return "Le vélo roule trop lentement";
-        }
-       
+        } 
     }
 
     public function switchOff() : bool {

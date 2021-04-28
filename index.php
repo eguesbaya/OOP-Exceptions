@@ -106,6 +106,13 @@ echo $bike->switchOn();
 
 ?>
 
+<h2>Part 6 : Static</h2>
+<?php
+require_once 'Speedometer.php';
+
+echo Speedometer::convertKMtoMiles(10);
+?>
+
 
 </body>
 </html>
